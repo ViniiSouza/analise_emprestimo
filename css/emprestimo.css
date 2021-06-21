@@ -1,16 +1,28 @@
-.background-nav {
+.background-purple {
     background-color: purple;
+}
+
+.text-purple {
+    color:#800080;
 }
 
 .nav-padding {
     margin: 0 10px;
 }
 
-.bg-warning:hover {
+.nav-button:hover {
     transition: 0.4s;
     background-color: #DC3545 !important; 
 }
 
 .nav-ativo {
     background-color: #DC3545 !important;
+}
+
+
+/* Rodapé */
+.footer-content {
+    min-height: 5vh;
+    line-height: 5vh;
+    text-align: center;
 }
