@@ -27,8 +27,8 @@ Um dos grandes desafios desta empresa, é se comunicar de forma efetiva com seus
 <p>Em construção</p>
 
 ## <h3 id="tecnologias">Tecnologias utilizadas</h3>
-- 1
-- 2
+- 1 HTML, CSS e JavaScript
+- 2 Bootstrap (primeiro projeto)
 - 3
 
 ## <h3 id="licenca">Licença</h3>
