@@ -1,0 +1,16 @@
+.background-nav {
+    background-color: purple;
+}
+
+.nav-padding {
+    margin: 0 10px;
+}
+
+.bg-warning:hover {
+    transition: 0.4s;
+    background-color: #DC3545 !important; 
+}
+
+.nav-ativo {
+    background-color: #DC3545 !important;
+}
