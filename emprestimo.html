@@ -33,6 +33,183 @@
     </div>
   </nav>
     
+  <!--BOTÃO E FORMULÁRIO-->
+  <div class="my-container">
+    <a class="btn btn-warning botao-inicio" data-bs-toggle="modal" href="#ConfirmCadastro" role="button">Inicie seu cadastro</a>
+  </div>
+
+  <!--Aba 1-->
+  <div class="modal fade" id="ConfirmCadastro" aria-hidden="true" aria-labelledby="ConfirmCadastroLabel" tabindex="-1"> 
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ConfirmCadastroLabel">Cadastro Básico</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Para a análise de empréstimo, solicitamos ao usuário um breve cadastro.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" aria-label="Close" data-bs-toggle="modal" data-bs-dismiss="modal">Sair</button>
+          <button class="btn btn-warning" data-bs-target="#DadosPessoais" data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Aba 2-->
+  <div class="modal fade" id="DadosPessoais" aria-hidden="true" aria-labelledby="DadosPessoaisLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="DadosPessoaisLabel">Dados pessoais</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form class="row g-3">
+          <div class="mb-1">
+            <label for="nomeCliente" class="form-label fw-bold">Digite seu nome: </label>
+            <input id="nomeCliente" class="form-control" type="text" placeholder="Nome"> <!--Adicionar campo obrigatório-->
+            <label for="sobrenomeCliente" class="form-label fw-bold">Digite seu sobrenome: </label>
+            <input id="sobrenomeCliente" class="form-control" type="text" placeholder="Sobrenome">
+            <label for="dataNascimento" class="form-label fw-bold">Data de nascimento: </label>
+            <input type="date" id="dataNascimento" class="form-control">
+          </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#ConfirmCadastro" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button class="btn btn-warning" data-bs-target="#ScoreCliente"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <!--Aba 3-->
+  <div class="modal fade" id="ScoreCliente" aria-hidden="true" aria-labelledby="ScoreClienteLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ScoreClienteLabel">Dados de propriedade</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form class="row g-3">
+          <div class="mb-1">
+            <label for="casaPropria" class="form-label fw-bold">Você possui casa própria?</label>
+              <select id="casaPropria" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="1">Sim</option>
+                <option value="2">Não</option>
+              </select>
+            <label for="veiculoProprio" class="form-label fw-bold">Você possui veículo próprio?</label>
+              <select id="veiculoProprio" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="1">Sim, 1.</option>
+                <option value="2">Sim, 2.</option>
+                <option value="3">Sim, 3 ou mais.</option>
+                <option value="4">Não</option>
+              </select>
+            <label for="mediaRenda" class="form-label fw-bold">Qual sua renda mensal?</label>
+              <select id="mediaRenda" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="1">Menos de um salário mínimo.</option>
+                <option value="2">De 1 a 2 salários mínimos.</option>
+                <option value="3">De 2 a 3 salários mínimos.</option>
+                <option value="4">3 salários mínimos ou mais.</option>
+              </select>
+          </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#DadosPessoais" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button class="btn btn-warning" data-bs-target="#ScoreCliente2"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Aba 4-->
+  <div class="modal fade" id="ScoreCliente2" aria-hidden="true" aria-labelledby="ScoreCliente2Label" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ScoreCliente2Label">Dados profissionais</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form class="row g-3">
+          <div class="mb-1">
+            <label for="situacaoProfissional" class="form-label fw-bold">Qual sua situação profissional?</label>
+              <select id="situacaoProfissional" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="1">Assalariado.</option>
+                <option value="2">Aposentado.</option>
+                <option value="3">Desempregado.</option>
+              </select>
+              <label for="nivelEscolaridade" class="form-label fw-bold">Qual seu nível de escolaridade?</label>
+              <select id="nivelEscolaridade" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="1">Ensino Superior.</option>
+                <option value="2">Ensino Médio.</option>
+                <option value="3">Ensino Fundamental ou menos.</option>
+              </select>
+              <label for="rendaMensal" class="form-label fw-bold">Qual sua renda em reais?</label> Apenas números
+              <input id="rendaMensal" type="number" class="form-control" placeholder="10000">
+          </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#ScoreCliente" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button id="enviarValores" class="btn btn-success" data-bs-target="#dadosEmprestimo"  data-bs-toggle="modal" data-bs-dismiss="modal">Enviar dados</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Aba 5-->
+  <div class="modal fade" id="dadosEmprestimo" aria-hidden="true" aria-labelledby="dadosEmprestimoLabel" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dadosEmprestimoLabel">Dados do empréstimo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <form class="row g-3">
+          <div class="mb-1">
+            <label for="valorEmprestimo" class="form-label fw-bold">Qual o valor de empréstimo desejado?</label> Apenas números
+              <input id="valorEmprestimo" type="number" class="form-control" placeholder="10000">
+            <label for="numParcelas" class="form-label fw-bold">Em quantas vezes você irá pagar?</label>
+              <select id="numParcelas" class="form-select" aria-label=".">
+                <option selected>Selecione uma opção</option>
+                <option value="12">12x.</option>
+                <option value="24">24x.</option>
+                <option value="36">36x.</option>
+                <option value="48">48x.</option>
+              </select>
+          </div>
+          </form>
+          <div class="container">
+            <p>Após selecionar o valor e as parcelas, clique no botão calcular.</p>
+            <p id="msgAviso"></p>
+            <button id="calcularParcelas" type="button" class="btn-light" data-bs-toggle="modal">Calcular</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#ScoreCliente2" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button id="enviarValores" class="btn btn-success" data-bs-target="#..."  data-bs-toggle="modal" data-bs-dismiss="modal">Seguir com solicitação</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--Falta incluir cabeçalho para o botão-->
+
   <!--RODAPÉ-->
     <footer>
       <div class="background-purple footer-content">
@@ -41,5 +218,6 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
