@@ -19,7 +19,36 @@
     background-color: #DC3545 !important;
 }
 
+.my-container {
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    
+}
 
+.botao-inicio {
+    width: 30vw;
+    height: 6vh;
+    transition: 0.7s;
+    font-size: calc(1.0rem + .4vw)!important;
+}
+
+.botao-inicio:hover {
+    background-color: #DC3545;
+}
+
+/* Evitar problema de texto sair do botão*/
+@media screen and (max-width:560px){
+    .botao-inicio{
+        font-size: calc(.7rem + 0.01vw)!important;
+        transition: .7s;
+    }
+
+    .botao-inicio:hover {
+        font-size: calc(.7rem + 0.01vw)!important;
+        color: white;
+    }
+}
 /* Rodapé */
 .footer-content {
     min-height: 5vh;
