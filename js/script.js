@@ -24,4 +24,18 @@ botaoCalcular.addEventListener("click", somarScore); // Soma os pontos e armazen
 // Gerar opções de empréstimo
 botaoCalcular.addEventListener("click", opcoesDeEmprestimo);
 
-//AJUSTAR FUNÇÃO, IDENTIFICAR ONDE PEGAR O BOTÃO DE VALIDAR DADOS E INCLUIR 
+// Detectar seleção de botão de empréstimo
+
+opcao1 = document.querySelector("#opcao1");
+opcao2 = document.querySelector("#opcao2");
+var opcaoSelecionada;
+
+// Chamar função de liberação do botão próximo ao selecionar opção
+
+document.querySelector("#menuOpcoes").addEventListener("click", verificarSelecao);
+
+//Verificar opção selecionada
+
+document.querySelector("#menuOpcoes").addEventListener("click", opcaoSelecao);
+
+//Colocar informações do empréstimo e usar score (aumentar caso tenha garantia)
