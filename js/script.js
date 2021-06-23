@@ -1,22 +1,27 @@
-var calcularParcelas = document.getElementById("calcularParcelas");
+// Todos os botões de enviar dados validando as informações
 
-function verificarEmprestimo() {
-    var rendaMensal = document.querySelector("#rendaMensal").value; 
-    var valorEmprestimo = document.querySelector("#valorEmprestimo").value; 
-    var numParcelas = document.querySelector("#numParcelas").value;
-    var totalParcela = (valorEmprestimo / numParcelas) //Calcular total parcela
-    var msgAviso = document.querySelector("#msgAviso"); // Selecionar parágrafo que receberá mensagem de erro
-    msgAviso.textContent = (""); //Limpar mensagem antes de aparecer novo erro
+document.querySelector("#botaoDadosPessoais").addEventListener("click", function() {
+    ValidarForm("#nomeCliente", "#sobrenomeCliente", "#dataNascimento", "#proximoDadosPessoais")
+});
 
-    if (totalParcela>=(rendaMensal*0.5)) { // Se total da parcela for maior que 50% da renda mensal, negar
-        document.querySelector("#msgAviso").classList.add("bg-warning"); //Bg vermelho a mensagem
-        msgAviso.textContent = ("O empréstimo não será avaliado pois compromete mais da metade de sua renda mensal.")
-    }
-    else if (totalParcela>=(rendaMensal*0.3)) { // Senão se total da parcela for maior que 30% da renda mensal, confirmar
-        document.querySelector("#msgAviso").classList.add("bg-warning"); //Bg vermelho a mensagem
-        msgAviso.textContent = ("O valor da parcela é maior que 30% de sua renda mensal e pode comprometer seu orçamento. Deseja mesmo continuar?")
-    }
-}
-// Falta bloquear passagem adiante se empréstimo negar. Seguir para próximas etapas também
+document.querySelector("#botaoDadosPessoais2").addEventListener("click", function() {
+    ValidarForm("#casaPropria", "#veiculoProprio", "#mediaRenda", "#proximoDadosPessoais2")
+});
 
-calcularParcelas.addEventListener("click", verificarEmprestimo);
+document.querySelector("#botaoDadosProfissionais").addEventListener("click", function() {
+    ValidarForm("#situacaoProfissional", "#nivelEscolaridade", "#rendaMensal", "#proximoDadosProfissionais")
+});
+
+
+
+// Chamar função de verificar empréstimo
+botaoCalcular.addEventListener("click", verificarEmprestimo);
+
+// Chamar função de score do empréstimo e Por valor de Score no lugar
+var totalScore;
+botaoCalcular.addEventListener("click", somarScore); // Soma os pontos e armazena na variável totalScore
+
+// Gerar opções de empréstimo
+botaoCalcular.addEventListener("click", opcoesDeEmprestimo);
+
+//AJUSTAR FUNÇÃO, IDENTIFICAR ONDE PEGAR O BOTÃO DE VALIDAR DADOS E INCLUIR 

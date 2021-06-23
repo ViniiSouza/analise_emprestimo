@@ -77,9 +77,12 @@
           </div>
         </form>
         </div>
+        <div class="container">
+          <button id="botaoDadosPessoais" type="button" class="btn btn-outline-primary" data-bs-toggle="modal">Validar dados</button>
+        </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#ConfirmCadastro" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button class="btn btn-warning" data-bs-target="#ScoreCliente"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
+          <button id="proximoDadosPessoais" disabled class="btn btn-warning" data-bs-target="#ScoreCliente"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
         </div>
         </form>
       </div>
@@ -99,32 +102,35 @@
           <div class="mb-1">
             <label for="casaPropria" class="form-label fw-bold">Você possui casa própria?</label>
               <select id="casaPropria" class="form-select" aria-label=".">
-                <option selected>Selecione uma opção</option>
-                <option value="1">Sim</option>
-                <option value="2">Não</option>
+                <option selected value="">Selecione uma opção</option>
+                <option value="200">Sim</option>
+                <option value="0">Não</option>
               </select>
             <label for="veiculoProprio" class="form-label fw-bold">Você possui veículo próprio?</label>
               <select id="veiculoProprio" class="form-select" aria-label=".">
-                <option selected>Selecione uma opção</option>
-                <option value="1">Sim, 1.</option>
-                <option value="2">Sim, 2.</option>
-                <option value="3">Sim, 3 ou mais.</option>
-                <option value="4">Não</option>
+                <option selected value="">Selecione uma opção</option>
+                <option value="70">Sim, 1.</option>
+                <option value="150">Sim, 2.</option>
+                <option value="200">Sim, 3 ou mais.</option>
+                <option value="0">Não</option>
               </select>
             <label for="mediaRenda" class="form-label fw-bold">Qual sua renda mensal?</label>
               <select id="mediaRenda" class="form-select" aria-label=".">
-                <option selected>Selecione uma opção</option>
-                <option value="1">Menos de um salário mínimo.</option>
-                <option value="2">De 1 a 2 salários mínimos.</option>
-                <option value="3">De 2 a 3 salários mínimos.</option>
-                <option value="4">3 salários mínimos ou mais.</option>
+                <option selected value="">Selecione uma opção</option>
+                <option value="20">Menos de um salário mínimo.</option>
+                <option value="50">De 1 a 2 salários mínimos.</option>
+                <option value="90">De 2 a 3 salários mínimos.</option>
+                <option value="130">3 salários mínimos ou mais.</option>
               </select>
           </div>
         </form>
+        <div class="container">
+          <button id="botaoDadosPessoais2" type="button" class="btn btn-outline-primary" data-bs-toggle="modal">Validar dados</button>
+        </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#DadosPessoais" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button class="btn btn-warning" data-bs-target="#ScoreCliente2"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
+          <button id="proximoDadosPessoais2" disabled class="btn btn-warning" data-bs-target="#ScoreCliente2"  data-bs-toggle="modal" data-bs-dismiss="modal">Próximo</button>
         </div>
         </form>
       </div>
@@ -144,26 +150,29 @@
           <div class="mb-1">
             <label for="situacaoProfissional" class="form-label fw-bold">Qual sua situação profissional?</label>
               <select id="situacaoProfissional" class="form-select" aria-label=".">
-                <option selected>Selecione uma opção</option>
-                <option value="1">Assalariado.</option>
-                <option value="2">Aposentado.</option>
-                <option value="3">Desempregado.</option>
+                <option selected value="">Selecione uma opção</option>
+                <option value="100">Assalariado.</option>
+                <option value="40">Aposentado.</option>
+                <option value="0">Desempregado.</option>
               </select>
               <label for="nivelEscolaridade" class="form-label fw-bold">Qual seu nível de escolaridade?</label>
               <select id="nivelEscolaridade" class="form-select" aria-label=".">
-                <option selected>Selecione uma opção</option>
-                <option value="1">Ensino Superior.</option>
-                <option value="2">Ensino Médio.</option>
-                <option value="3">Ensino Fundamental ou menos.</option>
+                <option selected value="">Selecione uma opção</option>
+                <option value="100">Ensino Superior.</option>
+                <option value="40">Ensino Médio.</option>
+                <option value="0">Ensino Fundamental ou menos.</option>
               </select>
               <label for="rendaMensal" class="form-label fw-bold">Qual sua renda em reais?</label> Apenas números
               <input id="rendaMensal" type="number" class="form-control" placeholder="10000">
           </div>
         </form>
+        <div class="container">
+          <button id="botaoDadosProfissionais" type="button" class="btn btn-outline-primary" data-bs-toggle="modal">Validar dados</button>
+        </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#ScoreCliente" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button id="enviarValores" class="btn btn-success" data-bs-target="#dadosEmprestimo"  data-bs-toggle="modal" data-bs-dismiss="modal">Enviar dados</button>
+          <button id="proximoDadosProfissionais" disabled class="btn btn-success" data-bs-target="#dadosEmprestimo"  data-bs-toggle="modal" data-bs-dismiss="modal">Enviar dados</button>
         </div>
         </form>
       </div>
@@ -201,12 +210,74 @@
         </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#ScoreCliente2" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button id="enviarValores" class="btn btn-success" data-bs-target="#..."  data-bs-toggle="modal" data-bs-dismiss="modal">Seguir com solicitação</button>
+          <button id="enviarValores" disabled class="btn btn-success" data-bs-target="#opcoesEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Seguir com solicitação</button>
         </div>
         </form>
       </div>
     </div>
   </div>
+
+  <!--Aba 6-->
+  <div class="modal fade" id="opcoesEmprestimo" aria-hidden="true" aria-labelledby="opcoesEmprestimoLabel" tabindex="-1"> 
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="opcoesEmprestimoLabel">Opções de Empréstimo<p class="fs-5 text-dark">Score: <span class="fs-5" id="valorScore"></span>/1000</p></h5> <!--Score aparece aqui-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5>Encontramos 2 opções de empréstimo para você!</h5>
+          <p><span id="op1-parcela">.</span>x de R$ <span id="op1-valor">.</span> (SEM garantia)</p>
+          <p><span id="op2-parcela">.</span>x de R$ <span id="op2-valor">.</span> (COM garantia)</p>
+          <!--CRIAR CAMPO DE SELEÇÃO PARA CADA ORÇAMENTO-->
+            
+
+          Lorem Ipsum
+
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#dadosEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button class="btn btn-warning" data-bs-target="#confirmacaoEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Aba 7 FALTA FAZER-->
+  <div class="modal fade" id="confirmacaoEmprestimo" aria-hidden="true" aria-labelledby="confirmacaoEmprestimoLabel" tabindex="-1"> 
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmacaoEmprestimoLabel">Confirmação de Empréstimo<p class="fs-5 text-dark">Score: <span class="fs-5" id="valorScore"></span>/1000</p></h5> <!--Score aparece aqui-->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="border border-2 border-primary" style="padding:1vh">
+            <h5>Explicação Opção 1</h5>
+            <p>Lorem Ipsum</p>
+            <p>Parcelamento: </p>
+            <p>Quando termina</p>
+            <p>Chance de aprovação</p>
+          </div>
+            
+
+          Lorem Ipsum
+
+
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-light" data-bs-target="#opcoesEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
+          <button class="btn btn-warning" data-bs-target="#..." data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="my-container"> <!--EXCLUIR-->
+    <a class="btn btn-warning botao-inicio" data-bs-toggle="modal" href="#opcoesEmprestimo" role="button">Botão teste</a>
+  </div> <!--EXCLUIR-->
 
   <!--Falta incluir cabeçalho para o botão-->
 
@@ -218,6 +289,12 @@
     </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js//verificarEmprestimo.js"></script>
+  <script type="text/javascript" src="js/valueToNumber.js"></script>
+  <script type="text/javascript" src="js/scoreEmprestimo.js"></script>
+  <script type="text/javascript" src="js/opcoesDeEmprestimo.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/validarFormulario.js"></script>
+  
 </body>
 </html>
