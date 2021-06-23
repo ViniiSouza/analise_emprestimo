@@ -225,20 +225,28 @@
           <h5 class="modal-title" id="opcoesEmprestimoLabel">Opções de Empréstimo<p class="fs-5 text-dark">Score: <span class="fs-5" id="valorScore"></span>/1000</p></h5> <!--Score aparece aqui-->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <h5>Encontramos 2 opções de empréstimo para você!</h5>
-          <p><span id="op1-parcela">.</span>x de R$ <span id="op1-valor">.</span> (SEM garantia)</p>
-          <p><span id="op2-parcela">.</span>x de R$ <span id="op2-valor">.</span> (COM garantia)</p>
-          <!--CRIAR CAMPO DE SELEÇÃO PARA CADA ORÇAMENTO-->
-            
-
-          Lorem Ipsum
-
-
+        <div id="menuOpcoes" class="modal-body">
+          <h4>Encontramos 2 opções de empréstimo para você!</h4>
+          <form id="selecaoOpcoes">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="opcao" id="opcao1" value="option1">
+            <label class="form-check-label fs-4" for="opcao1">
+              <p><span id="op1-parcela">.</span>x de R$ <span id="op1-valor">.</span> (SEM garantia de pagamento)</p>
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="opcao" id="opcao2" value="option2">
+            <label class="form-check-label fs-4" for="opcao2">
+              <p><span id="op2-parcela">.</span>x de R$ <span id="op2-valor">.</span> (COM garantia de pagamento)</p>
+            </label>
+          </div>
+        </form>
+          <hr>
+          <p class="fs-6">Observação: A opção 2 fornece valores e juros com uma garantia de pagamento do cliente.</p>
         </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#dadosEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button class="btn btn-warning" data-bs-target="#confirmacaoEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
+          <button disabled id="proximoOpcoesEmprestimo" class="btn btn-warning" data-bs-target="#confirmacaoEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
         </div>
       </div>
     </div>
@@ -275,10 +283,10 @@
   </div>
 
 
-<!-- BOTÃO PARA TESTES - EXCLUIR
+<!-- BOTÃO PARA TESTES - EXCLUIR-->
   <div class="my-container">
     <a class="btn btn-warning botao-inicio" data-bs-toggle="modal" href="#opcoesEmprestimo" role="button">Botão teste</a>
-  </div> EXCLUIR -->
+  </div> <!--EXCLUIR -->
 
   <!--Falta incluir cabeçalho para o botão-->
 
@@ -294,6 +302,7 @@
   <script type="text/javascript" src="js/valueToNumber.js"></script>
   <script type="text/javascript" src="js/scoreEmprestimo.js"></script>
   <script type="text/javascript" src="js/opcoesDeEmprestimo.js"></script>
+  <script type="text/javascript" src="js/verificarSelecao.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/validarFormulario.js"></script>
   
