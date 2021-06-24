@@ -8,6 +8,7 @@
   <a href="#problema">O problema</a> •
  <a href="#objetivo">Objetivos</a> •
  <a href="#status">Status do projeto</a> • 
+ <a href="#caracteristicas">Características do projeto</a> • 
  <a href="#tecnologias">Tecnologias utilizadas</a> • 
  <a href="#acesso">Como acessar</a> • 
  <a href="#licenca">Licença</a> • 
@@ -28,6 +29,16 @@ Um dos grandes desafios desta empresa, é se comunicar de forma efetiva com seus
 <h3 id="status">Status do projeto</h3>
 <p>Finalizado dentro do prazo</p>
 <p>Tempo de execução: 4 dias</p>
+
+## <h3 id="caracteristicas">Características do projeto</h3>
+Criei um sistema de pontos onde, dependendo da resposta do usuário, o seu Score alterava.
+Quanto maior o score, maior a chance de pagamento.
+O validador não aceita um empréstimo que tenha uma parcela que comprometa mais da metade do salário do usuário.
+Se o valor da parcela for maior que 30% do salário do usuário, é mostrado um aviso.
+- Sistema de opção com ou garantia de pagamento: Caso o usuário forneça um bem de valor como garantia, as taxas de juro são reduzidas e a chance de aprovação aumentada.
+- Diversos detalhes sobre a oferta selecionada
+- Validador em todos os campos: o usuário não pode seguir caso não preencha ou selecione uma opção válida
+ <p>Entre outros</p>
 
 ## <h3 id="tecnologias">Tecnologias utilizadas</h3>
 - 1 HTML e CSS 
