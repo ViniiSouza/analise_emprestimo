@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,12 +33,15 @@
     </div>
   </nav>
     
-  <!--BOTÃO E FORMULÁRIO-->
+  <!--BOTÃO-->
   <div class="my-container">
+    <h5 class="text-dark fs-2">Clique abaixo e solicite seu empréstimo já!</h5>
     <a class="btn btn-warning botao-inicio" data-bs-toggle="modal" href="#ConfirmCadastro" role="button">Inicie seu cadastro</a>
   </div>
 
-  <!--Aba 1-->
+  <!--FORMULÁRIO-->
+
+  <!--Aba 1 - Área de confirmação-->
   <div class="modal fade" id="ConfirmCadastro" aria-hidden="true" aria-labelledby="ConfirmCadastroLabel" tabindex="-1"> 
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -57,7 +60,7 @@
     </div>
   </div>
 
-  <!--Aba 2-->
+  <!--Aba 2 - Dados Pessoais 1-->
   <div class="modal fade" id="DadosPessoais" aria-hidden="true" aria-labelledby="DadosPessoaisLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -89,7 +92,7 @@
     </div>
   </div>
   
-  <!--Aba 3-->
+  <!--Aba 3 - Dados Pessoais 2-->
   <div class="modal fade" id="ScoreCliente" aria-hidden="true" aria-labelledby="ScoreClienteLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -137,7 +140,7 @@
     </div>
   </div>
 
-  <!--Aba 4-->
+  <!--Aba 4 - Dados Profissionais-->
   <div class="modal fade" id="ScoreCliente2" aria-hidden="true" aria-labelledby="ScoreCliente2Label" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -179,7 +182,7 @@
     </div>
   </div>
 
-  <!--Aba 5-->
+  <!--Aba 5 - Dados do empréstimo -->
   <div class="modal fade" id="dadosEmprestimo" aria-hidden="true" aria-labelledby="dadosEmprestimoLabel" tabindex="-1">
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -190,7 +193,7 @@
         <div class="modal-body">
         <form class="row g-3">
           <div class="mb-1">
-            <label for="valorEmprestimo" class="form-label fw-bold">Qual o valor de empréstimo desejado?</label> Apenas números
+            <label for="valorEmprestimo" class="form-label fw-bold">Qual o valor de empréstimo desejado?</label> Apenas números inteiros (sem valores quebrados)
               <input id="valorEmprestimo" type="number" class="form-control" placeholder="10000">
             <label for="numParcelas" class="form-label fw-bold">Em quantas vezes você irá pagar?</label>
               <select id="numParcelas" class="form-select" aria-label=".">
@@ -217,7 +220,7 @@
     </div>
   </div>
 
-  <!--Aba 6-->
+  <!--Aba 6 - Opções do empréstimo-->
   <div class="modal fade" id="opcoesEmprestimo" aria-hidden="true" aria-labelledby="opcoesEmprestimoLabel" tabindex="-1"> 
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
@@ -252,43 +255,87 @@
     </div>
   </div>
 
-  <!--Aba 7 FALTA FAZER-->
+  <!--Aba 7 - Confirmação do empréstimo-->
   <div class="modal fade" id="confirmacaoEmprestimo" aria-hidden="true" aria-labelledby="confirmacaoEmprestimoLabel" tabindex="-1"> 
     <div class="modal-dialog modal-lg modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="confirmacaoEmprestimoLabel">Confirmação de Empréstimo<p class="fs-5 text-dark">Score: <span class="fs-5" id="valorScore"></span>/1000</p></h5> <!--Score aparece aqui-->
+          <h5 class="modal-title" id="confirmacaoEmprestimoLabel">Confirmação de Empréstimo<p class="fs-5 text-dark">Score: <span class="fs-5" id="valorScoreModal2"></span>/1000</p></h5> <!--Score aparece aqui-->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+          <h5>Detalhes da Opção: </h5>
           <div class="border border-2 border-primary" style="padding:1vh">
-            <h5>Explicação Opção 1</h5>
-            <p>Lorem Ipsum</p>
-            <p>Parcelamento: </p>
-            <p>Quando termina</p>
-            <p>Chance de aprovação</p>
-          </div>
+            <p>Valor do empréstimo solicitado: R$ <span id="placeValorEmprestimo">Não informado</span></p>
+            <p>Valor final do empréstimo: R$ <span id="placeValorFinal">Não informado</span></p>
+            <p>Quantidade de parcelas: <span id="placeQuantParcelas">Não informado</span></p>
+            <p>Valor da parcela: R$ <span id="placeValorParcela">Não informado</span></p>
+            <p>Juros ao mês: <span id="placeJurosMes">x</span>%</p>
+            <p>Garantia de pagamento: <span id="placeGarantia">Não informado</span></p>
+            <p>Chance de aprovação: <span id="placeChanceAprovacao">x</span>%</p>
             
+          </div>
+          <br>
+          <p class="bg-warning" id="placeAvisoGarantia"></p>
+          <hr>
+          <p>Ao contratar o empréstimo, você concorda com nossos Termos de Uso.</p>
+          <p>Obs: Assim que aprovado na análise, o valor solicitado já pode ser retirado.</p>
 
-          Lorem Ipsum
+          <h5>Deseja contratar o empréstimo e enviar para análise?</h5>
 
 
         </div>
         <div class="modal-footer">
           <button class="btn btn-light" data-bs-target="#opcoesEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Voltar</button>
-          <button class="btn btn-warning" data-bs-target="#..." data-bs-toggle="modal" data-bs-dismiss="modal">Continuar</button>
+          <button id="proximoFinalizacaoEmprestimo" class="btn btn-warning" data-bs-target="#finalizacaoEmprestimo" data-bs-toggle="modal" data-bs-dismiss="modal">Contratar</button>
         </div>
       </div>
     </div>
   </div>
 
-
-<!-- BOTÃO PARA TESTES - EXCLUIR-->
-  <div class="my-container">
-    <a class="btn btn-warning botao-inicio" data-bs-toggle="modal" href="#opcoesEmprestimo" role="button">Botão teste</a>
-  </div> <!--EXCLUIR -->
-
-  <!--Falta incluir cabeçalho para o botão-->
+  <!--Aba 8 - Finalização do Empréstimo-->
+  <div class="modal fade" id="finalizacaoEmprestimo" aria-hidden="true" aria-labelledby="finalizacaoEmprestimoLabel" tabindex="-1"> 
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="finalizacaoEmprestimoLabel">Finalização</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="bg-success container-fluid">
+          <h3>Contrato solicitado com sucesso!</h3>
+          <h5>Solicitação n° #00001</h5>
+          <h6>Data: <span id="recebeData"></span> - Hora: <span id="recebeHora"></span></h6>
+          <h6>Nossa equipe irá analisar o seu contrato de empréstimo.</h6>
+        </div>
+        <div class="modal-body">
+          <h5>Detalhes da Opção: </h5>
+          <div class="border border-2 border-primary" style="padding:1vh">
+            <p>Nome do Requerente: <span id="endPlaceNomeCliente">Não informado</span></p>
+            <p>Data de nascimento: <span id="endPlaceNascimento">Não informado</span></p>
+            <hr>
+            <p>Valor do empréstimo solicitado: R$ <span id="endPlaceValorEmprestimo">Não informado</span></p>
+            <p>Valor final do empréstimo: R$ <span id="endPlaceValorFinal">Não informado</span></p>
+            <p>Quantidade de parcelas: <span id="endPlaceQuantParcelas">Não informado</span></p>
+            <p>Valor da parcela: R$ <span id="endPlaceValorParcela">Não informado</span></p>
+            <p>Juros ao mês: <span id="endPlaceJurosMes">x</span>%</p>
+            <hr>
+            <p>Garantia de pagamento: <span id="endPlaceGarantia">Não informado</span></p>
+            <p>Chance de aprovação: <span id="endPlaceChanceAprovacao">x</span>%</p>
+            <p>Score final: <span id="endPlaceScoreFinal">Não informado</span>/1000</p>
+            <p>Situação: Em análise</p>
+            
+            
+            
+            
+          </div>
+        </div>
+        <div class="modal-footer">
+          
+          <button class="btn btn-warning" data-bs-target="#..." data-bs-toggle="modal" data-bs-dismiss="modal">Finalizar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!--RODAPÉ-->
     <footer>
@@ -303,6 +350,9 @@
   <script type="text/javascript" src="js/scoreEmprestimo.js"></script>
   <script type="text/javascript" src="js/opcoesDeEmprestimo.js"></script>
   <script type="text/javascript" src="js/verificarSelecao.js"></script>
+  <script type="text/javascript" src="js/preencherConfirmacao.js"></script>
+  <script type="text/javascript" src="js/getDate.js"></script>
+  <script type="text/javascript" src="js/preencherFinalizacao.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <script type="text/javascript" src="js/validarFormulario.js"></script>
   

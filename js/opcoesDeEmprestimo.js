@@ -2,8 +2,8 @@ function opcoesDeEmprestimo () {
     var valorEmprestimo = toFloat("#valorEmprestimo");
     var parcelasEmprestimo = toInt("#numParcelas");
     var parceladoSemJuros = (valorEmprestimo/parcelasEmprestimo);
-    var parceladoComJuros = (parceladoSemJuros+(parceladoSemJuros*0.035)); // Taxa de juros de 3.5% ao mês sem garantia
-    var parceladoComJurosGarantia = (parceladoSemJuros+(parceladoSemJuros*0.02)); // Taxa de juros de 2% ao mês com garantia
+    var parceladoComJuros = (((parceladoSemJuros + (parceladoSemJuros*0.035))*parcelasEmprestimo)/parcelasEmprestimo); // Taxa de juros de 3.5% ao mês sem garantia
+    var parceladoComJurosGarantia = (((parceladoSemJuros + (parceladoSemJuros*0.02))*parcelasEmprestimo)/parcelasEmprestimo); // Taxa de juros de 2% ao mês com garantia
 
     // Opção sem garantia
     op1Parcela = document.querySelector("#op1-parcela");
