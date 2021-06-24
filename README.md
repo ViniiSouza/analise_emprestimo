@@ -2,13 +2,14 @@
 
 ## <h1 align="center">Projeto codigoparatodxs</h1>
 <p align="center">Projeto feito no processo seletivo codigoparatodxs - Serasa</p>
-<p align="center">Link do site: https://viniisouza.github.io/analise_emprestimo/index.html</p>
+<p align="center">Link do site do projeto: https://viniisouza.github.io/analise_emprestimo/index.html</p>
 
 <p align="center">
   <a href="#problema">O problema</a> •
  <a href="#objetivo">Objetivos</a> •
  <a href="#status">Status do projeto</a> • 
  <a href="#tecnologias">Tecnologias utilizadas</a> • 
+ <a href="#acesso">Como acessar</a> • 
  <a href="#licenca">Licença</a> • 
  <a href="#autor">Autor</a>
 </p>
@@ -19,18 +20,24 @@
 Um dos grandes desafios desta empresa, é se comunicar de forma efetiva com seus respectivos clientes. Por exemplo, uma das necessidades é apresentar, de acordo com sua saúde financeira, propostas de empréstimo pessoal.</p>
 
 ## <h3 id="objetivo">Objetivos atingidos</h3>
-- [ ] Liste as ofertas de crédito de acordo com o descritivo técnico;
-- [ ] Detalhe a oferta do usuário ao momento de escolha;
-- [ ] Apresente a revisão das informações;
-- [ ] E permita-o realizar a contratação;
+- [X] Liste as ofertas de crédito de acordo com o descritivo técnico;
+- [X] Detalhe a oferta do usuário ao momento de escolha;
+- [X] Apresente a revisão das informações;
+- [X] E permita-o realizar a contratação;
 
 <h3 id="status">Status do projeto</h3>
-<p>Em construção</p>
+<p>Finalizado dentro do prazo</p>
+<p>Tempo de execução: 4 dias</p>
 
 ## <h3 id="tecnologias">Tecnologias utilizadas</h3>
-- 1 HTML, CSS e JavaScript
-- 2 Bootstrap (primeiro projeto)
-- 3
+- 1 HTML e CSS 
+- 2 JavaScript
+- 3 Bootstrap (primeiro projeto)
+
+## <h3 id="acesso">Acesso ao site</h3>
+
+Para acessar ao projeto, basta entrar no link: https://viniisouza.github.io/analise_emprestimo/index.html</p>
+O projeto em si está na aba "Solicite seu empréstimo". Basta entrar e seguir os passos conforme solicitado.
 
 ## <h3 id="licenca">Licença</h3>
 The MIT License (MIT)
