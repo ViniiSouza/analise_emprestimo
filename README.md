@@ -25,6 +25,7 @@ Um dos grandes desafios desta empresa, é se comunicar de forma efetiva com seus
 - [X] Detalhe a oferta do usuário ao momento de escolha;
 - [X] Apresente a revisão das informações;
 - [X] E permita-o realizar a contratação;
+- [ ] Cálculo correto de juros (objetivo não atingido, cálculo incorreto)
 
 <h3 id="status">Status do projeto</h3>
 <p>Finalizado dentro do prazo</p>
